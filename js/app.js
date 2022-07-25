@@ -21,9 +21,9 @@ let resultsList = document.getElementById('results-list');
 
 // ************ Constructor Function************
 
-function Products(name, photo) {
+function Products(name, photoExtension = 'jpg') {
   this.name = name;
-  this.photo = photo;
+  this.photo = `img/${name}.${photoExtension}`;
   this.views = 0;
   this.votes = 0;
 
@@ -31,8 +31,29 @@ function Products(name, photo) {
 
 }
 
+
+
 // *************Object Creation ****************
 
+new Products('sweep', 'png');
+new Products('bag');
+new Products('banana');
+new Products('bathroom');
+new Products('boots');
+new Products('breakfast');
+new Products('bubblegum');
+new Products('chair');
+new Products('cthulhu');
+new Products('dog-duck');
+new Products('dragon');
+new Products('pen');
+new Products('pet-sweep');
+new Products('scissors');
+new Products('shark');
+new Products('tauntaun');
+new Products('unicorn');
+new Products('water-can');
+new Products('wine-glass');
 
 
 // ************* Helper Functions ***************
