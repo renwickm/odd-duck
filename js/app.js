@@ -62,10 +62,23 @@ function randomIndexGenerator(){
   return Math.floor(Math.random() * allProducts.length);
 }
 
+// let productIndexArr = [];
+
 function renderImgs(){
+
+  // while(productIndexArr.length < 3){
+  //   let randomNum = randomGen();
+  //   if(!productIndexArr.includes(randomNum)){
+  //     productIndexArr.push(randomNum);
+  //   }
+  // }
   let imgOneIndex = randomIndexGenerator();
   let imgTwoIndex = randomIndexGenerator();
   let imgThreeIndex = randomIndexGenerator();
+
+  // let imgOneIndex = productIndexArr.pop();
+  // let imgTwoIndex = productIndexArr.pop();
+  // let imgThreeIndex = productIndexArr.pop();
 
   while(imgOneIndex === imgTwoIndex || imgOneIndex === imgThreeIndex || imgTwoIndex === imgThreeIndex){
     imgTwoIndex = randomIndexGenerator();

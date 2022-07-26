@@ -10,48 +10,49 @@
 </head>
 
 <body>
-
-  <header id=" grid-header">
+  <div id="grid-container">
+    </div>  <header id=" grid-header">
   
-    <div class="header">
+      <div class="header">
   
-    <h1>Odd-Duck</h1>
+      <h1>Odd-Duck</h1>
   
-    </div>
-  
-  </header>
-
-  <main id="grid-main-container">
-
-    <section id="img-container">
-
-      <div class="imgs">
-
-      <img id="img-one" src="" alt="">
-      <img id="img-two" src="" alt="">
-      <img id="img-three" src="" alt="">
-
       </div>
+  
+    </header>
+
+    <main id="grid-main-container">
+      <canvas id="my-chart"></canvas>
+      <section id="img-container">
+
+        <div class="imgs">
+
+        <img id="img-one" src="" alt="">
+        <img id="img-two" src="" alt="">
+        <img id="img-three" src="" alt="">
+
+        </div>
+
+      </section>
+
+      <section id="sidebar">
+
+        <div id="show-results-btn">View Results</div>
+
+        <ul id="results-list"></ul>
+
+      </section>
+
+    </main>
+
+    <section id="footer">
+
+    <footer>©Matthew Renwick, Student at Code Fellows</footer>
 
     </section>
-
-    <section id="sidebar">
-
-      <div id="show-results-btn">View Results</div>
-
-      <ul id="results-list"></ul>
-
-    </section>
-
-  </main>
-
-  <section id="footer">
-
-  <footer>©Matthew Renwick, Student at Code Fellows</footer>
-
-  </section>
-
-<script src="js/app.js"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.2/dist/chart.min.js"></script>
+  <script src="js/app.js"></script>
 
 </body>
 
