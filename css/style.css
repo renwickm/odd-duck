@@ -1,0 +1,23 @@
+/* .grid-container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(200px 50px);
+  gap: 30px;
+} */
+
+  grid-template-areas;
+    "header header header"
+    "sidebar content content"
+    "sidebar content content"
+    "sidebar content content"
+    "sidbar article article"
+    "footer footer footer"
+
+/* .grid-container div {
+  border: 2px solid black;
+  font-size: 1.5em;
+  padding: 30px;
+
+} */
