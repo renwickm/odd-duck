@@ -28,10 +28,15 @@
 
 ### Executable Code
 
-- Random img generator
+- Random img generator - randomly generate indexes
   - selects 2 unique imgs
 - Event Listeners
   - click - on the imgs - rerender new images(increase the views on the products that are rendered) - count the vote of the product that was clicked/that will lower the number of votes
   - click - "button" that will show results
 
 ## Links and References
+
+Math.floor(math.random() * (max - min +1) + min);
+
+1. Referenced Code 201 Demo Class 11 ('GOAT VOTE') to complete portions of the JS, but made necessarry adjustments to lab 11 in the areas that were not relatable.
+2. Referenced Code 201 CSS Grid Layout class to better understand grid layout and applied it to lab 11.
