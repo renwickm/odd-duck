@@ -113,8 +113,8 @@ function handleClick(event){
   }
   totalVotes--;
   let one = document.getElementById('img-one');
-  let two = document.getElementById('img-two')
-  let three = document.getElementById('img-three')
+  let two = document.getElementById('img-two');
+  let three = document.getElementById('img-three');
   console.log(one.alt, two.alt, three.alt);
   renderImgs();
 
