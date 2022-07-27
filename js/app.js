@@ -66,24 +66,22 @@ let productIndexArr = [];
 
 function renderImgs(){
 
-  while(productIndexArr.length < 3){
+  while(productIndexArr.length < 6){
     let randomNum = randomIndexGenerator();
     if(!productIndexArr.includes(randomNum)){
       productIndexArr.push(randomNum);
     }
   }
-  // let imgOneIndex = randomIndexGenerator();
-  // let imgTwoIndex = randomIndexGenerator();
-  // let imgThreeIndex = randomIndexGenerator();
+  
 
-  let imgOneIndex = productIndexArr.pop();
-  let imgTwoIndex = productIndexArr.pop();
-  let imgThreeIndex = productIndexArr.pop();
+  let imgOneIndex = productIndexArr.shift();
+  let imgTwoIndex = productIndexArr.shift();
+  let imgThreeIndex = productIndexArr.shift();
 
-  while(imgOneIndex === imgTwoIndex || imgOneIndex === imgThreeIndex || imgTwoIndex === imgThreeIndex){
-    imgTwoIndex = randomIndexGenerator();
-    imgThreeIndex = randomIndexGenerator();
-  }
+  // while(imgOneIndex === imgTwoIndex || imgOneIndex === imgThreeIndex || imgTwoIndex === imgThreeIndex){
+  //   imgTwoIndex = randomIndexGenerator();
+  //   imgThreeIndex = randomIndexGenerator();
+  // }
 
   imgOne.src = allProducts[imgOneIndex].photo;
   imgOne.alt = allProducts[imgOneIndex].name;
