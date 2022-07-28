@@ -18,6 +18,17 @@ let imgThree = document.getElementById('img-three');
 let resultBtn = document.getElementById('show-results-btn');
 let resultsList = document.getElementById('results-list');
 
+// *********** LOCAL STORAGE CONTINUES ***********
+// STEP 3: GET DATA OUT OF LOCAL STORAGE
+
+let retreivedProducts = localStorage.getItem('myProducts');
+
+console.log('retreivedProducts', retreivedProducts);
+
+let parsedProducts = JSON.parse(retreivedProducts);
+
+console.log('parsed Products >>>', parsedProducts);
+
 
 // ************ Constructor Function************
 
@@ -35,6 +46,9 @@ function Products(name, photoExtension = 'jpg') {
 
 // *************Object Creation ****************
 
+if(retreivedProducts){
+  allProducts = parsedProducts;
+} else{
 new Products('sweep', 'png');
 new Products('bag');
 new Products('banana');
@@ -54,7 +68,8 @@ new Products('tauntaun');
 new Products('unicorn');
 new Products('water-can');
 new Products('wine-glass');
-
+}
+console.log('allproducts form Constructor>>>', allProducts);
 
 // ************* Helper Functions ***************
 
@@ -110,17 +125,28 @@ function handleClick(event){
     }
   }
   totalVotes--;
-  let one = document.getElementById('img-one');
-  let two = document.getElementById('img-two');
-  let three = document.getElementById('img-three');
-  console.log(one.alt, two.alt, three.alt);
+  
   renderImgs();
 
   if(totalVotes === 0){
+
+    // ************ LOCAL STORAGE STARTS HERE *****************
+
+    let stringifiedProducts = JSON.stringify(allProducts);
+
+    console.log('stringified Products >>>', stringifiedProducts);
+
+    // ***********STEP 2 ***********************************
+
+    localStorage.setItem('myProducts', stringifiedProducts);
+
+
     imgContainer.removeEventListener('click', handleClick);
   }
 
 }
+
+
 
 function handleShowResults(){
   if(totalVotes === 0){
